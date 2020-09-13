@@ -1,6 +1,6 @@
 # The GIS Jobs Map
 
-Source code for [The GIS Jobs Map](http://gisjobsmap.com)
+Source code for [The GIS Jobs Map](https://gisjobsmap.com)
 
 ## About
 This is a side project I hacked together over the years, it is undoubtedly a work in progress and in need of improvement. 
