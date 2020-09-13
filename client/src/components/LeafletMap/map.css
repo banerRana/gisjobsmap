@@ -1,0 +1,96 @@
+
+/* @import url('~react-leaflet-markercluster/dist/styles.min.css');  */
+
+/*@media only screen and (min-width: 1007px) {*/
+/*.map-container{*/
+/*!*height: calc(100vh - 42px);*!*/
+/*padding-right:0;*/
+/*}*/
+/*}*/
+
+/*.map-container{*/
+    /*height:100%;*/
+    /*!*height: calc(100vh - 49px);*!*/
+    /*width: 100%;*/
+    /*z-index: 400;*/
+/*}*/
+
+
+/*.map-info{*/
+    /*background-color: rgba(31,51,73,.60);*/
+    /*position: absolute;*/
+    /*top: 48px;*/
+    /*z-index: 10;*/
+    /*color: #fff;*/
+    /*padding: 5px;*/
+    /*border-radius: 10px;*/
+    /*font-size: 12px;*/
+    /*line-height: 18px;*/
+    /*font-weight: 700;*/
+/*}*/
+
+.map-canvas{
+    height:100%;
+    width:100%;
+}
+
+.leaflet-container{
+    height:100%;
+    width:100%;
+}
+
+.leaflet-popup-content-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+    border-radius: 0;
+}
+
+.leaflet-popup-content{
+    /*margin: 10px 20px 10px 10px;*/
+    margin: 10px;
+
+}
+
+/*.leaflet-top,*/
+/*.leaflet-bottom {*/
+/*position: absolute;*/
+/*z-index: 500 !important; !* was 1000 *!*/
+/*pointer-events: none;*/
+/*}*/
+
+
+/* Customising the Clustered Markers */
+
+.marker-cluster-custom {
+    background:  rgba(51,153,255, 0.9);
+    border: 3px solid rgba(148,197,222, 0.8);
+    border-radius: 50%;
+    color: #ededed;
+    height: 40px;
+    line-height: 37px;
+    text-align: center;
+    width: 40px;
+    font-size:14px;
+}
+
+.country-layer{
+/* pointer-events: none; */
+cursor: grab;
+}
+
+.crosshair {
+    /* left: calc(50% - 10px);
+    top: calc(50% - 10px);  */
+    left: 50%;
+    top: 50%; 
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    z-index: 10000;
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    color: #222;
+    text-shadow: 1px 1px 3px #fff;
+}

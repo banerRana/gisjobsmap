@@ -1,0 +1,82 @@
+/*//@import './colors';*/
+/* @import '~antd/lib/style/mixins/clearfix.less'; */
+
+.logo {
+    width: 150px; 
+    height: 50px;
+    background: url("../../img/logo.svg") center no-repeat;
+    background-size: 80%;
+    background-position-y: 15px;
+    margin-left: 10px;
+    float: left;
+  }
+
+
+.header {
+    box-shadow: 0px 2px 5px 0 rgba(0,0,0,.4);
+    border-bottom: 1px solid #999999;
+}
+
+
+/* .popover-menu{
+    z-index:999;
+}
+
+.ant-menu-sub.ant-menu-inline{
+    box-shadow: 0px 4px 4px 0 rgba(0,0,0,.4) !important;
+    border-bottom: 1px solid #999999 !important;
+}
+
+.navMenuItem{
+    padding: 0 10px !important;
+}
+
+
+.mobile-menu{
+    position:absolute;
+    right: 15px;
+    top: 12px;
+    z-index: 601;
+}
+.nav-phone-icon{
+    font-size: 30px;
+} */
+.country-list{
+    overflow-Y:overlay;
+    height: 50vh;
+    box-shadow: 0px 2px 5px 0 rgba(0,0,0,.4);
+}
+
+/*.ant-menu-item :hover {*/
+     /*border-top: 2px solid #1890ff;*/
+     /*border-bottom: 2px solid transparent;*/
+ /*}*/
+
+/*& > .ant-menu-item-selected {*/
+        /*border-top: 2px solid @primary-color;*/
+        /*border-bottom: 2px solid transparent;*/
+/*a {*/
+    /*color: @primary-color;*/
+/*}*/
+
+
+/*.ant-select-auto-complete .ant-select-search__field__wrap input{*/
+    /*border:none;*/
+/*}*/
+
+/*:focus {*/
+    /*outline:none;*/
+    /*outline-width: 0;*/
+/*}*/
+
+
+button {
+    border-radius: 32px;
+}
+
+
+/*#preview-button {*/
+/*//.ant-btn {*/
+/*//    color: @site-text-color;*/
+/*//}*/
+/*}*/

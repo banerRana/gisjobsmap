@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    machine:
+      docker_layer_caching: false
+    steps:
+      - checkout
+      - run: docker-compose build
+      - run: docker-compose up -d --abort-on-container-exit --exit-code-from e2e
+      - run: docker-compose exec backend python -m unittest
+      - run: docker-compose exec scraper python -m unittest
+workflows:
+  build:
+    jobs:
+    - build
+  version: 2

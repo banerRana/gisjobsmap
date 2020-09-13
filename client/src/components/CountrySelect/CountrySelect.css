@@ -1,0 +1,23 @@
+/* .country-select-wrap{
+    position: relative;
+    float: left;
+    height: 22px;
+    line-height: 22px;
+    padding-left: 16px;
+    margin-top: 8px;
+}
+
+.country-select{
+    width:100%;
+} */
+
+.country-select > .ant-select-selection{
+    width:100%;
+    border-color:transparent !important;
+    box-shadow: none !important;
+    -webkit-box-shadow:none !important;
+}
+
+/* .ant-select-dropdown .ant-select-dropdown--single{
+    margin-top: 100px !important;
+} */

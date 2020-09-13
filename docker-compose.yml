@@ -1,0 +1,76 @@
+version: '3.2'
+
+services:
+
+  jobs-db:
+    build:
+      context: ./jobs-db
+      dockerfile: ../docker/dev/jobs-db.Dockerfile
+    environment:
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=jobs
+    ports:
+      - 5436:5432
+    volumes:
+      - postgresql-jobs:/var/lib/postgresql
+      - postgresql-jobs-data:/var/lib/postgresql/data
+
+  geonames-db:
+    image: postgis/postgis:12-master
+    environment:
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=geonames
+    ports:
+      - 5437:5432
+    volumes:
+      - postgresql-geonames:/var/lib/postgresql
+      - postgresql-geonames-data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: ../docker/dev/backend.Dockerfile
+    env_file:
+      - ./docker/dev/.env
+    ports:
+      - 5001:5000
+    volumes:
+     - ./backend:/app
+    depends_on:
+      - jobs-db
+      - geonames-db
+    tty: true
+
+  scraper:
+    build:
+      context: ./scraper
+      dockerfile: ../docker/scraper.Dockerfile
+    env_file:
+      - ./docker/dev/.env
+      - ./docker/scraper.env
+    volumes:
+      - ./scraper:/app
+    depends_on:
+      - backend
+    tty: true
+
+  client:
+    build:
+      context: ./client
+      dockerfile: ../docker/dev/client.Dockerfile
+    ports:
+      - 3007:3000
+    env_file:
+      - ./docker/dev/.env
+    volumes:
+      - ./client:/usr/src/app
+      - /usr/src/app/node_modules
+    depends_on:
+      - backend
+    tty: true
+
+volumes:
+    postgresql-jobs:
+    postgresql-jobs-data:
+    postgresql-geonames:
+    postgresql-geonames-data:
