@@ -19,8 +19,6 @@ const Navbar = () => {
         if (key) {
             if (key.indexOf("faq") > -1) {
                 setFaqModalVisible(true);
-            } else if (key.indexOf("twitter") > -1) {
-                window.open("https://twitter.com/gisjobsmap");
             } else if (key.indexOf("issue") > -1) {
                 window.open(
                     "https://github.com/ishiland/gisjobsmap/issues/new"
@@ -84,16 +82,6 @@ const Navbar = () => {
                         </span>
                     }
                 >
-                    <Menu.Item
-                        key="twitter"
-                        className="navMenuItem"
-                        style={{ padding: "0 10px !important" }}
-                    >
-                        <span>
-                            <Icon type="twitter-o" style={{ color: "black" }} />
-                            Follow
-                        </span>
-                    </Menu.Item>
                     <Menu.Item
                         key="faq"
                         className="navMenuItem"
