@@ -20,6 +20,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 *.log
+*.pem
+*.save
 
 # secrets
 /docker/prod/.env
