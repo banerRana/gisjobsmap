@@ -7,6 +7,13 @@ class BaseConfig(object):
     TESTING = False
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SECRET_KEY = os.environ.get('SECRET_KEY')
+
+    # map settings for admin
+    MAPBOX_MAP_ID = 'light-v10'
+    MAPBOX_ACCESS_TOKEN = os.environ.get('MAPBOX_ACCESS_TOKEN')
+    DEFAULT_CENTER_LAT = -33.918861
+    DEFAULT_CENTER_LONG = 18.423300
+
     DEBUG_TB_ENABLED = False
     DEBUG_TB_INTERCEPT_REDIRECTS = False
     BCRYPT_LOG_ROUNDS = 13
