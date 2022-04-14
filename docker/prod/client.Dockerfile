@@ -19,6 +19,6 @@ RUN npm run build
 
 
 # production environment
-FROM nginx:1.17-alpine
+FROM nginx:1.20.2-alpine
 
 COPY --from=build /usr/src/app/build /etc/nginx/html
