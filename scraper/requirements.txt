@@ -1,5 +1,5 @@
 indeed==0.0.4
-requests==2.23.0
+requests==2.31.0
 PySocks==1.6.8
 beautifulsoup4==4.8.0
 html5lib==1.0.1
